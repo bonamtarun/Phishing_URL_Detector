@@ -1,7 +1,8 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import re
 import urllib.parse
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -199,6 +200,11 @@ def analyze_url(url):
             
     except Exception as e:
         return True, 100, [f"Invalid URL format: {str(e)}"]
+
+@app.route('/')
+def index():
+    """Serve the main HTML page"""
+    return send_from_directory('.', 'index.html')
 
 @app.route('/check_url', methods=['POST'])
 def check_url():
