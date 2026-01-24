@@ -231,10 +231,11 @@ def health():
     return jsonify({"status": "running", "message": "Phishing URL Detector API is active"})
 
 if __name__ == "__main__":
+    import os
+    port = int(os.environ.get('PORT', 5000))
     print("=" * 60)
     print("🛡️  Phishing URL Detector - Backend Server")
     print("=" * 60)
-    print("Server starting on http://127.0.0.1:5000")
-    print("Press CTRL+C to stop the server")
+    print(f"Server starting on port {port}")
     print("=" * 60)
-    app.run(debug=True, host='127.0.0.1', port=5000)
+    app.run(debug=False, host='0.0.0.0', port=port)
