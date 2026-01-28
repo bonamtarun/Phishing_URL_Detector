@@ -48,7 +48,7 @@ The detector analyzes URLs based on 10+ critical security checks:
    ```
 
 4. **Access the tool:**
-   Open your browser and navigate to `http://localhost:5000`.
+   Open your browser and navigate to `https://url-guardian.onrender.com`.
 
 ## 📖 API Usage
 
@@ -87,4 +87,5 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📄 License
 
-This project is open-source and available under the [MIT License](LICENSE).
+This project is open-source.
+
